@@ -20,65 +20,61 @@
                                 <rect key="frame" x="157" y="128" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="MHV-Oz-awV"/>
-                                    <constraint firstAttribute="width" constant="100" id="ZL0-4d-pgU"/>
+                                    <constraint firstAttribute="height" constant="100" id="fYX-eg-kGm"/>
+                                    <constraint firstAttribute="width" constant="100" id="hWQ-e0-OcP"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTy-l7-3nd">
                                 <rect key="frame" x="157" y="278" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="aQR-NP-S0I"/>
-                                    <constraint firstAttribute="height" constant="100" id="bdj-Yu-N2x"/>
+                                    <constraint firstAttribute="width" constant="100" id="DRj-ef-QAS"/>
+                                    <constraint firstAttribute="height" constant="100" id="YQV-VF-nar"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQl-gJ-ftE">
                                 <rect key="frame" x="157" y="428" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="4xx-5I-gU4"/>
-                                    <constraint firstAttribute="height" constant="100" id="LaK-li-1rj"/>
+                                    <constraint firstAttribute="height" constant="100" id="KDY-nl-TZR"/>
+                                    <constraint firstAttribute="width" constant="100" id="yEV-ap-Hfi"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-W3-gSn">
-                                <rect key="frame" x="103.5" y="676" width="207" height="100"/>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-W3-gSn">
+                                <rect key="frame" x="82" y="781" width="250" height="50"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="1Lf-Ul-lHQ"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="207" id="33n-DZ-l3M"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="HJU-Bw-J4y"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                     <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="controlButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="uPG-wd-pMj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dTy-l7-3nd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="2kA-zC-7hj"/>
-                            <constraint firstItem="OQl-gJ-ftE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="81a-X4-FUz"/>
-                            <constraint firstItem="oxT-ty-zGr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="9Gr-mX-2q9"/>
-                            <constraint firstItem="OQl-gJ-ftE" firstAttribute="centerX" secondItem="oxT-ty-zGr" secondAttribute="centerX" id="ATH-ZE-Fed"/>
-                            <constraint firstItem="OQl-gJ-ftE" firstAttribute="top" secondItem="dTy-l7-3nd" secondAttribute="bottom" constant="50" id="Bft-Fk-nNO"/>
-                            <constraint firstItem="dTy-l7-3nd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DVc-qD-DUR"/>
-                            <constraint firstItem="dTy-l7-3nd" firstAttribute="top" secondItem="oxT-ty-zGr" secondAttribute="bottom" constant="50" id="JGa-5d-xvD"/>
-                            <constraint firstItem="dbc-W3-gSn" firstAttribute="centerX" secondItem="oxT-ty-zGr" secondAttribute="centerX" id="LHa-DU-yRP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dTy-l7-3nd" secondAttribute="trailing" constant="157" id="Pva-mb-aTM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oxT-ty-zGr" secondAttribute="trailing" constant="157" id="Q9K-T4-ihc"/>
-                            <constraint firstItem="OQl-gJ-ftE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bsE-es-lNa"/>
-                            <constraint firstItem="OQl-gJ-ftE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d8a-fp-XCs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dbc-W3-gSn" secondAttribute="bottom" constant="86" id="f2N-Ue-dQw"/>
-                            <constraint firstItem="dbc-W3-gSn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g2Z-Em-Ouk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OQl-gJ-ftE" secondAttribute="trailing" constant="157" id="gu7-X7-XSp"/>
-                            <constraint firstItem="oxT-ty-zGr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hil-2n-ozV"/>
-                            <constraint firstItem="oxT-ty-zGr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pnw-td-GGf"/>
-                            <constraint firstItem="oxT-ty-zGr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="smF-wb-feT"/>
-                            <constraint firstItem="dTy-l7-3nd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wD3-ru-MzC"/>
-                            <constraint firstItem="dTy-l7-3nd" firstAttribute="centerX" secondItem="oxT-ty-zGr" secondAttribute="centerX" id="yPI-R5-NEx"/>
+                            <constraint firstItem="oxT-ty-zGr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2jH-gp-Rd4"/>
+                            <constraint firstItem="dbc-W3-gSn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="59X-NB-D5y"/>
+                            <constraint firstItem="dTy-l7-3nd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BNr-Wo-TH7"/>
+                            <constraint firstItem="OQl-gJ-ftE" firstAttribute="top" secondItem="dTy-l7-3nd" secondAttribute="bottom" constant="50" id="Wpj-mn-KPl"/>
+                            <constraint firstItem="dTy-l7-3nd" firstAttribute="top" secondItem="oxT-ty-zGr" secondAttribute="bottom" constant="50" id="Zzf-Vq-kD2"/>
+                            <constraint firstItem="oxT-ty-zGr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="i9v-Gb-Tgg"/>
+                            <constraint firstItem="OQl-gJ-ftE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jFk-H8-cGp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dbc-W3-gSn" secondAttribute="bottom" constant="31" id="oLw-Sf-VAx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="changeButtom" destination="dbc-W3-gSn" id="Cd8-81-gT1"/>
+                        <outlet property="greenColour" destination="OQl-gJ-ftE" id="q7v-m3-BdU"/>
+                        <outlet property="redColour" destination="oxT-ty-zGr" id="J1R-2V-J7z"/>
+                        <outlet property="yellowColour" destination="dTy-l7-3nd" id="waJ-d6-XDM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
