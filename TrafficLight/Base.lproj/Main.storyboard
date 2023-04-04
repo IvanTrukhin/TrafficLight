@@ -71,9 +71,12 @@
                     </view>
                     <connections>
                         <outlet property="changeButton" destination="dbc-W3-gSn" id="Cd8-81-gT1"/>
-                        <outlet property="greenColour" destination="OQl-gJ-ftE" id="q7v-m3-BdU"/>
-                        <outlet property="redColour" destination="oxT-ty-zGr" id="J1R-2V-J7z"/>
-                        <outlet property="yellowColour" destination="dTy-l7-3nd" id="waJ-d6-XDM"/>
+                        <outlet property="greenColourView" destination="OQl-gJ-ftE" id="q7v-m3-BdU"/>
+                        <outlet property="redColourView" destination="oxT-ty-zGr" id="J1R-2V-J7z"/>
+                        <outlet property="yellowColourView" destination="dTy-l7-3nd" id="waJ-d6-XDM"/>
+                        <outletCollection property="viewsCollections" destination="oxT-ty-zGr" collectionClass="NSMutableArray" id="LD6-aZ-IiF"/>
+                        <outletCollection property="viewsCollections" destination="dTy-l7-3nd" collectionClass="NSMutableArray" id="IVA-xZ-NkH"/>
+                        <outletCollection property="viewsCollections" destination="OQl-gJ-ftE" collectionClass="NSMutableArray" id="B4V-x5-Dk0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

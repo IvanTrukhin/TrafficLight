@@ -13,11 +13,14 @@ enum ColourLight {
 
 class ViewController: UIViewController {
 
-    @IBOutlet var redColour: UIView!
-    @IBOutlet var yellowColour: UIView!
-    @IBOutlet var greenColour: UIView!
+    @IBOutlet var redColourView: UIView!
+    @IBOutlet var yellowColourView: UIView!
+    @IBOutlet var greenColourView: UIView!
     
     @IBOutlet var changeButton: UIButton!
+    
+    
+    @IBOutlet var viewsCollections: [UIView]!
     
     private var colourLight = ColourLight.red
     private let lightIsOn: CGFloat = 1
@@ -28,23 +31,39 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .white
         
-        redColour.layer.cornerRadius = 50
-        redColour.layer.borderWidth = 4
-        redColour.layer.borderColor = UIColor.black.cgColor
-        redColour.alpha = lightIsOff
+        // MARK: before refactoring
+//        redColourView.layer.cornerRadius = 50
+//        redColourView.layer.borderWidth = 4
+//        redColourView.layer.borderColor = UIColor.black.cgColor
+//        redColourView.alpha = lightIsOff
+//
+//        yellowColourView.layer.cornerRadius = 50
+//        yellowColourView.layer.borderWidth = 4
+//        yellowColourView.layer.borderColor = UIColor.black.cgColor
+//        yellowColourView.alpha = lightIsOff
+//
+//        greenColourView.layer.cornerRadius = 50
+//        greenColourView.layer.borderWidth = 4
+//        greenColourView.layer.borderColor = UIColor.black.cgColor
+//        greenColourView.alpha = lightIsOff
         
-        yellowColour.layer.cornerRadius = 50
-        yellowColour.layer.borderWidth = 4
-        yellowColour.layer.borderColor = UIColor.black.cgColor
-        yellowColour.alpha = lightIsOff
+        // MARK: after refactoring
+        func optimizationView(_ view: UIView) {
+            view.layer.cornerRadius = 50
+            view.layer.borderWidth = 4
+            view.layer.borderColor = UIColor.black.cgColor
+            view.alpha = lightIsOff
+        }
         
-        greenColour.layer.cornerRadius = 50
-        greenColour.layer.borderWidth = 4
-        greenColour.layer.borderColor = UIColor.black.cgColor
-        greenColour.alpha = lightIsOff
+//        optimizationView(redColourView)
+//        optimizationView(yellowColourView)
+//        optimizationView(greenColourView)
+        
+        for view in viewsCollections {
+            optimizationView(view)
+        }
         
         changeButton.layer.cornerRadius = 10
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func controlButton() {
@@ -53,16 +72,16 @@ class ViewController: UIViewController {
         
         switch colourLight {
         case .red:
-            greenColour.alpha = lightIsOff
-            redColour.alpha = lightIsOn
+            greenColourView.alpha = lightIsOff
+            redColourView.alpha = lightIsOn
             colourLight = .yellow
         case .yellow:
-            redColour.alpha = lightIsOff
-            yellowColour.alpha = lightIsOn
+            redColourView.alpha = lightIsOff
+            yellowColourView.alpha = lightIsOn
             colourLight = .green
         case .green:
-            yellowColour.alpha = lightIsOff
-            greenColour.alpha = lightIsOn
+            yellowColourView.alpha = lightIsOff
+            greenColourView.alpha = lightIsOn
             colourLight = .red
         }
     }
