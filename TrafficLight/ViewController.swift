@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet var yellowColour: UIView!
     @IBOutlet var greenColour: UIView!
     
-    @IBOutlet var changeButtom: UIButton!
+    @IBOutlet var changeButton: UIButton!
     
     private var colourLight = ColourLight.red
     private let lightIsOn: CGFloat = 1
@@ -26,23 +26,30 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         
         redColour.layer.cornerRadius = 50
-        yellowColour.layer.cornerRadius = 50
-        greenColour.layer.cornerRadius = 50
-        
+        redColour.layer.borderWidth = 4
+        redColour.layer.borderColor = UIColor.black.cgColor
         redColour.alpha = lightIsOff
+        
+        yellowColour.layer.cornerRadius = 50
+        yellowColour.layer.borderWidth = 4
+        yellowColour.layer.borderColor = UIColor.black.cgColor
         yellowColour.alpha = lightIsOff
+        
+        greenColour.layer.cornerRadius = 50
+        greenColour.layer.borderWidth = 4
+        greenColour.layer.borderColor = UIColor.black.cgColor
         greenColour.alpha = lightIsOff
         
-        changeButtom.layer.cornerRadius = 10
+        changeButton.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
 
     @IBAction func controlButton() {
         
-        changeButtom.setTitle("Next", for: .normal)
+        changeButton.setTitle("Next", for: .normal)
         
         switch colourLight {
         case .red:
