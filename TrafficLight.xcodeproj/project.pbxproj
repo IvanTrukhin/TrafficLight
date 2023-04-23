@@ -7,19 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0479E329E317F8004F9CAB /* SectionTrafficLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0479E229E317F8004F9CAB /* SectionTrafficLightView.swift */; };
+		2C0479E629E31D26004F9CAB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2C0479E529E31D26004F9CAB /* SnapKit */; };
 		2C7C26CF2971100F005A2FFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7C26CE2971100F005A2FFA /* AppDelegate.swift */; };
 		2C7C26D12971100F005A2FFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7C26D02971100F005A2FFA /* SceneDelegate.swift */; };
-		2C7C26D32971100F005A2FFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7C26D22971100F005A2FFA /* ViewController.swift */; };
 		2C7C26D62971100F005A2FFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7C26D42971100F005A2FFA /* Main.storyboard */; };
 		2C7C26D829711015005A2FFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7C26D729711015005A2FFA /* Assets.xcassets */; };
 		2C7C26DB29711015005A2FFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7C26D929711015005A2FFA /* LaunchScreen.storyboard */; };
+		2C9D013729F19375008F8916 /* TrafficLightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7C26D22971100F005A2FFA /* TrafficLightController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C0479E229E317F8004F9CAB /* SectionTrafficLightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTrafficLightView.swift; sourceTree = "<group>"; };
 		2C7C26CB2971100F005A2FFA /* TrafficLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7C26CE2971100F005A2FFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C7C26D02971100F005A2FFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C7C26D22971100F005A2FFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C7C26D22971100F005A2FFA /* TrafficLightController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightController.swift; sourceTree = "<group>"; };
 		2C7C26D52971100F005A2FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C7C26D729711015005A2FFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C7C26DA29711015005A2FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C0479E629E31D26004F9CAB /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +62,8 @@
 			children = (
 				2C7C26CE2971100F005A2FFA /* AppDelegate.swift */,
 				2C7C26D02971100F005A2FFA /* SceneDelegate.swift */,
-				2C7C26D22971100F005A2FFA /* ViewController.swift */,
+				2C7C26D22971100F005A2FFA /* TrafficLightController.swift */,
+				2C0479E229E317F8004F9CAB /* SectionTrafficLightView.swift */,
 				2C7C26D42971100F005A2FFA /* Main.storyboard */,
 				2C7C26D729711015005A2FFA /* Assets.xcassets */,
 				2C7C26D929711015005A2FFA /* LaunchScreen.storyboard */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = TrafficLight;
+			packageProductDependencies = (
+				2C0479E529E31D26004F9CAB /* SnapKit */,
+			);
 			productName = TrafficLight;
 			productReference = 2C7C26CB2971100F005A2FFA /* TrafficLight.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 2C7C26C22971100F005A2FFA;
+			packageReferences = (
+				2C0479E429E31D26004F9CAB /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 2C7C26CC2971100F005A2FFA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C7C26D32971100F005A2FFA /* ViewController.swift in Sources */,
+				2C0479E329E317F8004F9CAB /* SectionTrafficLightView.swift in Sources */,
 				2C7C26CF2971100F005A2FFA /* AppDelegate.swift in Sources */,
+				2C9D013729F19375008F8916 /* TrafficLightController.swift in Sources */,
 				2C7C26D12971100F005A2FFA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C0479E429E31D26004F9CAB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C0479E529E31D26004F9CAB /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C0479E429E31D26004F9CAB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2C7C26C32971100F005A2FFA /* Project object */;
 }
