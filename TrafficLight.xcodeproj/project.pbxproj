@@ -15,6 +15,7 @@
 		2C7C26D829711015005A2FFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7C26D729711015005A2FFA /* Assets.xcassets */; };
 		2C7C26DB29711015005A2FFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7C26D929711015005A2FFA /* LaunchScreen.storyboard */; };
 		2C9D013729F19375008F8916 /* TrafficLightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7C26D22971100F005A2FFA /* TrafficLightController.swift */; };
+		2C9DDD1A29FE633900D4D2B1 /* TrafficLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9DDD1929FE633900D4D2B1 /* TrafficLightView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		2C7C26D729711015005A2FFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C7C26DA29711015005A2FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C7C26DC29711015005A2FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C9DDD1929FE633900D4D2B1 /* TrafficLightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				2C7C26D02971100F005A2FFA /* SceneDelegate.swift */,
 				2C7C26D22971100F005A2FFA /* TrafficLightController.swift */,
 				2C0479E229E317F8004F9CAB /* SectionTrafficLightView.swift */,
+				2C9DDD1929FE633900D4D2B1 /* TrafficLightView.swift */,
 				2C7C26D42971100F005A2FFA /* Main.storyboard */,
 				2C7C26D729711015005A2FFA /* Assets.xcassets */,
 				2C7C26D929711015005A2FFA /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 				2C0479E329E317F8004F9CAB /* SectionTrafficLightView.swift in Sources */,
 				2C7C26CF2971100F005A2FFA /* AppDelegate.swift in Sources */,
 				2C9D013729F19375008F8916 /* TrafficLightController.swift in Sources */,
+				2C9DDD1A29FE633900D4D2B1 /* TrafficLightView.swift in Sources */,
 				2C7C26D12971100F005A2FFA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

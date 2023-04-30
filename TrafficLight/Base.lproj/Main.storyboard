@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <accessibilityOverrides isEnabled="YES"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,14 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTy-l7-3nd" customClass="SectionTrafficLightView" customModule="TrafficLight" customModuleProvider="target">
-                                <rect key="frame" x="127.5" y="224" width="120" height="120"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQl-gJ-ftE" customClass="SectionTrafficLightView" customModule="TrafficLight" customModuleProvider="target">
-                                <rect key="frame" x="127.5" y="388" width="120" height="120"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-W3-gSn">
                                 <rect key="frame" x="62.5" y="572" width="250" height="48"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
@@ -40,57 +33,26 @@
                                     <action selector="controlButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="uPG-wd-pMj"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxT-ty-zGr" customClass="SectionTrafficLightView" customModule="TrafficLight" customModuleProvider="target">
-                                <rect key="frame" x="127.5" y="60" width="120" height="120"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="ah0-S9-1bO"/>
-                                    <constraint firstAttribute="height" constant="120" id="bog-pt-nys"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="OQl-gJ-ftE" firstAttribute="width" secondItem="oxT-ty-zGr" secondAttribute="width" id="2y2-Ac-xAE"/>
-                            <constraint firstItem="dbc-W3-gSn" firstAttribute="centerX" secondItem="oxT-ty-zGr" secondAttribute="centerX" id="Ew4-4E-aqJ"/>
-                            <constraint firstItem="dTy-l7-3nd" firstAttribute="top" secondItem="oxT-ty-zGr" secondAttribute="bottom" constant="44" id="I0C-uQ-2IR"/>
-                            <constraint firstItem="OQl-gJ-ftE" firstAttribute="centerX" secondItem="oxT-ty-zGr" secondAttribute="centerX" id="Iy3-kW-KFg"/>
-                            <constraint firstItem="oxT-ty-zGr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Q5Y-Dk-m2h"/>
-                            <constraint firstItem="OQl-gJ-ftE" firstAttribute="height" secondItem="oxT-ty-zGr" secondAttribute="height" id="Shk-eq-6kE"/>
-                            <constraint firstItem="dTy-l7-3nd" firstAttribute="width" secondItem="oxT-ty-zGr" secondAttribute="width" id="TNF-LB-KAv"/>
-                            <constraint firstItem="oxT-ty-zGr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vf8-aT-dPc"/>
-                            <constraint firstItem="dTy-l7-3nd" firstAttribute="height" secondItem="oxT-ty-zGr" secondAttribute="height" id="YUH-OA-a7h"/>
-                            <constraint firstItem="OQl-gJ-ftE" firstAttribute="top" secondItem="dTy-l7-3nd" secondAttribute="bottom" constant="44" id="bm3-cq-XOR"/>
-                            <constraint firstItem="dbc-W3-gSn" firstAttribute="top" secondItem="OQl-gJ-ftE" secondAttribute="bottom" constant="64" id="bog-nN-iy5"/>
-                            <constraint firstItem="dTy-l7-3nd" firstAttribute="centerX" secondItem="oxT-ty-zGr" secondAttribute="centerX" id="gH6-p0-hL2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dbc-W3-gSn" secondAttribute="bottom" constant="47" id="Czk-Kj-rak"/>
+                            <constraint firstItem="dbc-W3-gSn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="imC-Xd-4wa"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="changeButton" destination="dbc-W3-gSn" id="Cd8-81-gT1"/>
-                        <outlet property="firstSectoinView" destination="oxT-ty-zGr" id="J1R-2V-J7z"/>
-                        <outlet property="redViewHeightConstraint" destination="bog-pt-nys" id="1uB-21-Xay"/>
-                        <outlet property="secondSectionView" destination="dTy-l7-3nd" id="waJ-d6-XDM"/>
-                        <outlet property="thirdSectionView" destination="OQl-gJ-ftE" id="q7v-m3-BdU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="69.642857142857139"/>
+            <point key="canvasLocation" x="265" y="253"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
