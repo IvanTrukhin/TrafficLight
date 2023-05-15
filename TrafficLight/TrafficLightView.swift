@@ -9,10 +9,10 @@ import UIKit
 import SnapKit
 
 class TrafficLightView: UIView {
-
-    private var firstSectoinView = SectionTrafficLightView(colorLight: .red)
-    private var secondSectionView = SectionTrafficLightView(colorLight: .yellow)
-    private var thirdSectionView = SectionTrafficLightView(colorLight: .green)
+    
+    private let sections: [SectionTrafficLightView] = [SectionTrafficLightView(colorLight: .red),
+                                                       SectionTrafficLightView(colorLight: .yellow),
+                                                       SectionTrafficLightView(colorLight: .green)]
     
     private let stackView = UIStackView(frame: .zero)
     
@@ -29,18 +29,14 @@ class TrafficLightView: UIView {
     
     // MARK: - Public
     func stateChange() {
-        if firstSectoinView.isOff() && secondSectionView.isOff() && thirdSectionView.isOff() {
-            firstSectoinView.turnOn()
-        } else if firstSectoinView.isOn() {
-            firstSectoinView.turnOff()
-            secondSectionView.turnOn()
-        } else if secondSectionView.isOn() {
-            secondSectionView.turnOff()
-            thirdSectionView.turnOn()
-        } else if thirdSectionView.isOn() {
-            thirdSectionView.turnOff()
-            firstSectoinView.turnOn()
-            }
+        if let indexOfFirstOnSection = sections.firstIndex(where: { $0.isOn() }),
+               indexOfFirstOnSection < sections.count - 1 {
+            sections[indexOfFirstOnSection].turnOff()
+            sections[indexOfFirstOnSection + 1].turnOn()
+        } else {
+            sections.forEach({ $0.turnOff()})
+            sections.first?.turnOn()
+        }
     }
     
     // MARK: - Private
@@ -53,28 +49,19 @@ class TrafficLightView: UIView {
         stackView.alignment = .center
         stackView.distribution = .fill
         
-        stackView.addArrangedSubview(firstSectoinView)
-        stackView.addArrangedSubview(secondSectionView)
-        stackView.addArrangedSubview(thirdSectionView)
-        
+        sections.forEach { section in
+            stackView.addArrangedSubview(section)
+            
+            section.snp.makeConstraints { make in
+                make.width.height.equalTo(100)
+            }
+        }
         stackView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
-        }
-        firstSectoinView.snp.makeConstraints { make in
-            make.width.height.equalTo(100)
-        }
-        secondSectionView.snp.makeConstraints { make in
-            make.width.height.equalTo(100)
-        }
-        thirdSectionView.snp.makeConstraints { make in
-            make.width.height.equalTo(100)
         }
     }
     
     private func loadingState () {
-        firstSectoinView.turnOff()
-        secondSectionView.turnOff()
-        thirdSectionView.turnOff()
+        sections.forEach({$0.turnOff()})
     }
-    
 }
